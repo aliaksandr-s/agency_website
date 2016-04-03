@@ -1,0 +1,314 @@
+// - - - - - - - - - - Variables - - - - - - - - - //
+
+$white: #FFFFFF
+$highlight: #7ac483
+$grey_background: #f2f1f8
+$grey_copy: #b9b7c6
+$dark_grey: #3f3d4e
+
+// - - - - - - - - - - Global Styles - - - - - - - - - //
+
+.wrapper
+	width: 1440px
+	max-width: 90%
+	margin: 0 auto
+
+.button
+	border: none
+	outline: none
+	border-radius: 2rem
+	padding: .5rem 3.5rem
+	font-weight: 700
+	color: $white
+	text-decoration: none
+	text-align: center
+
+.button_highlight
+	background: $highlight
+
+.button_secondary
+	background: rgba(250, 250, 250, 0.35)
+
+
+.button_small
+	padding: .3rem 1.5rem
+
+
+.button_large
+	padding: 1rem 5rem
+	font-size: 1.35rem
+
+@font-face
+  font-family: Brandon_reg
+  src: url(../fonts/Brandon_reg.otf)
+
+body
+  font-family: Brandon_reg, Helvetica, sans-serif
+body
+	-webkit-font-smoothing: antialiased
+*
+  box-sizing: border-box
+
+.cf:after,
+.cf:before
+	content: " "
+	display: table
+
+.cf:after
+	clear: both
+
+// - - - - - - - - - - Banner Styles - - - - - - - - - //
+
+#banner
+  background-image: url(../images/background.jpg)
+  background-size: cover
+  background-repeat: no-repeat
+  position: relative
+  color: $white
+
+  #content
+    .title
+      margin: 0
+      font-size: 4rem
+      line-height: 4rem
+
+    .sub_title
+      font-size: 1.4rem
+      text-align: center
+      width: 500px
+      margin: 0 auto
+      padding-top: 2rem
+
+    text-align: center
+    padding: 2rem 0 8rem 0
+    margin-top: 2rem
+    position: relative
+
+  header
+    padding: 2rem 0
+  nav
+    a
+      text-decoration: none
+      color: white
+      margin-right: 1.3rem
+    float: right
+
+  #logo
+    span
+      font-weight: 300
+    margin: 0
+    float: left
+    font-size: 1.2rem
+    font-weight: 900
+
+  .button_wrapper
+    margin: 3.3rem 0 4rem 0
+    a:nth-child(2)
+      position: relative
+    a:nth-child(2)::before
+      content: ""
+      background: url("../images/layer-1.svg") no-repeat
+      width: 15px
+      height: 15px
+      position: absolute
+      left: 32px
+      top: 12px
+  img
+    position: absolute
+    bottom: 6rem
+    left: 50%
+    margin-left: -14px
+#banner .sub_title
+	max-width: 95%
+// - - - - - - - - - - Sevices Styles - - - - - - - - - //
+
+#services
+  background: $grey_background
+  position: relative
+  padding: 2rem 0 15rem 0
+  .wrapper
+    position: absolute
+    top: -3rem
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+    &::after
+      content: " "
+      position: absolute
+      border-top: 2px solid #c9c7d3
+      left: 47%
+      bottom: -34px
+      width: 66.5%
+      margin-left: -30.2%
+    .service
+      float: left
+      width: 31%
+      text-align: center
+      margin: 0 1.16% 0 1.16%
+      background-color: $white
+      padding: 1rem 2rem 3rem 2rem
+      border-radius: 0.5rem
+      box-shadow: 0 0 57px rgba(4, 6, 9, 0.25)
+      position: relative
+      h3
+        font-size: 1.7rem
+      p
+        color: #9d9ab1
+        margin-bottom: 1.5rem
+      .button::after
+        content: ""
+        position: absolute
+        bottom: -2.1rem
+        left: 50%
+        color: #9d9ab1
+        border-left: 2px solid #c9c7d3
+        height: 34px
+
+      .middle::before
+        content: ""
+        position: absolute
+        bottom: -4.3rem
+        left: 50%
+        color: #9d9ab1
+        border-left: 2px solid #c9c7d3
+        height: 58px
+
+
+// - - - - - - - - - - Past_work Styles - - - - - - - - - //
+
+#past_work
+  text-align: center
+  position: relative
+  overflow: hidden
+  padding: 2rem 0 23rem 0
+  display: block
+  background: #3f3d4f
+  color: $white
+  #clients
+    width: 750px
+    max-width: 95%
+  h2
+    font-size: 2.5rem
+  #slider_buttons
+    list-style: none
+    margin-bottom: 2rem
+    a
+      color: $white
+      content: ""
+      width: 11px
+      height: 11px
+      border: 2px solid #5b596f
+      border-radius: 50%
+      background: #5b596f
+      display: inline-block
+      margin: 0 0.8rem 0 0.1rem
+      transition: all 0.3s linear
+      position: relative
+      &:hover
+        background-color: highlight
+        border: 2px solid  $highlight
+      &.slider_active
+        background-color: $highlight
+        border: 2px solid  $highlight
+
+
+  #slider_img
+    list-style: none
+    li
+      width: 600px
+      height: 375px
+      overflow: hidden
+      background-color: $white
+      box-shadow: 0 0 57px rgba(4, 6, 9, 0.25)
+      position: absolute
+      z-index: 3
+      border-radius: .35rem .35rem 0 0
+      img
+        width: 100%
+      &:nth-child(1)
+        bottom: -37px
+        left: 0
+        z-index: 2
+        transform: scale(0.8, 0.8)
+      &:nth-child(2)
+        left: 50%
+        margin-left: -300px
+        z-index: 4
+      &:nth-child(3)
+        bottom: -37px
+        right: 0
+        z-index: 2
+        transform: scale(0.8, 0.8)
+
+#past_work #slider_img li
+	transition: all 0.3s ease-out
+
+// - - - - - - - - - - Contact Styles - - - - - - - - - //
+#contact_us
+	text-align: center
+	background-color: #f2f1f8
+	color: #3f3d4f
+	padding: 3rem 0 8rem 0
+	h2
+		font-size: 2.5rem
+	p
+		font-size: 1.3rem
+		display: block
+		width: 600px
+		max-width: 95%
+		margin: 0 auto 4.3rem
+		color: #9896aa
+		font-weight: 400
+		line-height: 2rem
+	.button
+		padding: .8rem 4rem
+
+// - - - - - - - - - - Footer Styles - - - - - - - - - //
+footer
+	text-align: center
+	font-size: 0.9rem
+	padding: 0.7rem 0
+	font-weight: 700
+	color: #9896aa
+
+// - - - - - - - - - - Responsive Styles - - - - - - - - - //
+
+@media only screen and (max-width : 1090px)
+  #services
+    *::after, *::before
+      display: none
+
+@media only screen and (max-width : 773px)
+	#services
+		height: 790px
+	#services .wrapper .service
+		width: 98%
+		margin-top: 1.5rem
+		.button
+			padding: 0.8rem 3rem
+
+@media only screen and (max-width : 420px)
+	#banner .wrapper
+		#logo
+			float: none
+			text-align: center
+			margin-bottom: 2rem
+		nav
+			float: none
+			a
+				display: block
+				font-size: 1.5rem
+				text-align: center
+		.button_wrapper .button
+			display: block
+			margin-bottom: 1rem
+			padding: 1.2rem 1rem
+		.button_secondary::before
+			display: none
+		.button_small
+			margin: 0
+
+@media only screen and (max-width : 330px)
+	#services
+		height: 900px

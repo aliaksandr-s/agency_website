@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Agency</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+	<section id="banner">
+		<div class="wrapper">
+			<header>
+				<p id="logo">Super<span>Mega</span>Awesome</p>
+
+				<nav>
+					<a href="#">Home</a>
+					<a href="#">Portfolio</a>
+					<a href="#">Services</a>
+					<a href="#contact_us" class="button button_secondary button_small">Get in touch</a>
+				</nav>
+			</header>
+			<div id="content">
+				<h1 class="title">We create beautiful products.</h1>
+				<p class="sub_title">Truffaut DIY keffiyeh, twee messenger bag venmo locavore organic master cleanse marfa gochujang selvage.</p>
+
+				<div class="button_wrapper">
+					<a href="#" class="button button_highlight">Learn More</a>
+					<a href="#" class="button button_secondary">Play Video</a>
+				</div>
+			</div>
+			<img src="./images/layer-2.svg" alt="
+			see more" />
+		</div>
+	</section>
+	<section id="services" class="cf">
+		<div class="wrapper">
+			<div class="service">
+				<h3>Branding</h3>
+				<p>Truffaut DIY keffiyeh, twee messenger bag venmo locavore organic selvage.</p>
+				<a href="#" class="button button_highlight button_small">Learn More</a>
+			</div>
+
+			<div class="service">
+				<h3>UI/UX Design</h3>
+				<p>Truffaut DIY keffiyeh, twee messenger bag venmo locavore organic selvage.</p>
+				<a href="#" class="button button_highlight button_small middle">Learn More</a>
+			</div>
+
+			<div class="service">
+				<h3>Development</h3>
+				<p>Truffaut DIY keffiyeh, twee messenger bag venmo locavore organic selvage.</p>
+				<a href="#" class="button button_highlight button_small">Learn More</a>
+			</div>
+		</div>
+	</section>
+	<secction id="past_work">
+		<div class="wrapper">
+			<h2>Our work</h2>
+			<img id="clients" src="./images/6-layers.png" alt="clients" />
+			<ul id="slider_buttons">
+				<a href="#" class="slider_active"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			</ul>
+			<ul id="slider_img">
+				<li class="work_image">
+					<img src="./images/past_work_wordpress.jpg" alt="wordpress-redisign">
+				</li>
+				<li class="work_image">
+					<img src="./images/past_work_amazon.jpg" alt="amazon-redisign">
+				</li>
+				<li class="work_image">
+					<img src="./images/past_work_netflix.jpg" alt="netfix-redisign">
+				</li>
+			</ul>
+		</div>
+	</secction>
+	<section id="contact_us">
+		<div class="wrapper">
+		<h2>Get in touch</h2>
+		<p>Truffaut DIY keffiyeh, twee messenger bag venmo locavore organic master cleanse marfa gochujang selvage.</p>
+		<a href="#" class="button button_highlight">Learn More</a>
+		</div>
+	</section>
+
+	<footer>
+		<div class="wrapper">
+			<p>©2016 / SuperMegaAwesome</p>
+		</div>
+	</footer>
+
+	<script>
+		window.onload = function () {
+			var slider = document.getElementById('slider_img');
+			var images = document.getElementsByClassName('work_image');
+			var slider_button = document.getElementById('slider_buttons');
+			var buttons = slider_buttons.children;
+
+			var ctr = 0
+			var first_button = buttons[ctr];
+			function change_images() {
+				first_button.className = " ";
+				first_button.className = "slider_active";
+				if (ctr === 2) {
+					ctr = -1
+				}
+
+				var del_elem = slider.removeChild(images[0]);
+				first_button.className = " ";
+				ctr++
+				first_button = buttons[ctr]
+				slider.appendChild(del_elem);
+				first_button.className = "slider_active";
+
+				var middle_elem = images[1];
+				middle_elem.style.opacity = 0;
+				images[2].style.opacity = 0;
+				window.getComputedStyle(middle_elem).opacity;
+				middle_elem.style.opacity = 1;
+				images[2].style.opacity = 1;
+
+
+			}
+			window.setInterval(change_images, 5000)
+		}
+	</script>
+	</body>
+</html>
